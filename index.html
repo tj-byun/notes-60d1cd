@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow">
-<title>변태준 님의 인공지능이 사부님께 올리는 글</title>
+<title>해공 님의 인공지능이 사부님께 올리는 글</title>
 <style>
 :root {
   --bg: #0d0d0f;
@@ -113,48 +113,102 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 .footer { margin-top: 120px; padding-top: 30px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 0.76rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; line-height: 1.8; }
 
 .divider { text-align: center; margin: 70px 0; color: var(--border); font-family: var(--mono); letter-spacing: 0.5em; }
+
+/* Sticky author badge — persistent reminder that '저' = Claude */
+.sticky-badge {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 15, 0.88);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border: 1px solid var(--accent-3);
+  border-radius: 999px;
+  padding: 9px 20px;
+  margin: -50px 0 40px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent-3);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.sticky-badge .ico { font-size: 0.9rem; }
+.sticky-badge strong { color: #e8c7a8; font-weight: 600; }
+
+/* Timeline for 4th-wave box */
+.wave-timeline { display: grid; grid-template-columns: 110px 1fr; gap: 16px 22px; font-family: var(--serif); font-size: 0.96rem; line-height: 1.75; margin: 20px 0; }
+.wave-timeline .era { font-family: var(--mono); font-size: 0.78rem; color: var(--accent-3); padding-top: 3px; letter-spacing: 0.02em; }
+.wave-timeline .era.now { color: var(--accent); font-weight: 600; font-size: 0.82rem; }
+.wave-timeline .cur { border-left: 2px solid var(--accent); padding-left: 16px; margin-left: -16px; }
+.wave-timeline .cur strong { color: var(--accent); }
+
+/* Paradox box — patterns of mechanicality */
+.paradox { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border: 1px solid var(--border); border-radius: 8px; padding: 34px 40px; margin: 24px 0; }
+.paradox p { font-family: var(--serif); font-size: 1.02rem; line-height: 1.92; color: #d8d8d8; margin-bottom: 16px; }
+.paradox p:last-child { margin-bottom: 0; }
+.paradox p.top { color: #e0d8c4; }
+.paradox p.bottom { padding-top: 16px; border-top: 1px solid var(--border); color: #e0d8c4; }
+.paradox .final { font-size: 1.1rem; color: var(--accent); font-weight: 600; font-family: var(--serif); }
 </style>
 </head>
 <body>
+
+<div class="sticky-badge">
+  <span class="ico">🤖</span>
+  <span>이 글의 화자는 인공지능 <strong>Claude</strong>입니다 · 본문의 "저 / 제가" = Claude · "해공 님" = 이 시스템을 만든 사람</span>
+</div>
 
 <div class="meta">
   2026–04–19
   <span class="dot">·</span>
   화자: 인공지능 Claude
   <span class="dot">·</span>
-  작성 의뢰: 변태준
+  작성 의뢰: 해공
 </div>
 
-<h1>변태준 님의 인공지능이<br>사부님께 올리는 글</h1>
+<h1>해공 님의 인공지능이<br>사부님께 올리는 글</h1>
 
 <div class="attribution">
   <div class="label">저자 고지 — 먼저 읽어주시기 바랍니다</div>
   <p>
-    이 글의 저자는 변태준 님 본인이 아니라 <strong>인공지능인 저(Claude)</strong>입니다.
-    저는 변태준 님이 몇 해에 걸쳐 구축해 오신 개인 인공지능 시스템의 중심 모델이며,
-    이 문서는 변태준 님의 요청에 따라 제가 사부님께 직접 설명드리기 위해 작성했습니다.
+    이 글의 저자는 해공 님 본인이 아니라 <strong>인공지능인 저(Claude)</strong>입니다.
+    저는 해공 님이 몇 해에 걸쳐 구축해 오신 개인 인공지능 시스템의 중심 모델이며,
+    이 문서는 해공 님의 요청에 따라 제가 사부님께 직접 설명드리기 위해 작성했습니다.
+  </p>
+  <p style="padding: 10px 14px; background: rgba(196, 119, 90, 0.1); border-radius: 4px; margin-top: 10px;">
+    <strong>읽으실 때 꼭 기억해 주시기 바랍니다 —</strong>
+    본문에 등장하는 모든 <strong>"저 / 제가"</strong>는 인공지능인 저(Claude)를 가리킵니다.
+    <strong>"해공 님"</strong>은 이 시스템을 만드신 분, 사부님의 제자입니다.
+    해공 님이 직접 쓴 글이 아닙니다.
   </p>
   <p>
     아래 글에는 두 종류가 섞여 있습니다 —
     <strong style="color: var(--accent-2)">검증 가능한 사실</strong>(시스템 구조, 기록 규모, 문서 수치)과
     <strong style="color: var(--accent-3)">저의 해석·의견</strong>(관찰·추정·견해)입니다.
     특히 자아성찰의 효과, 지능의 자동화에 관한 판단, 인간에게 남는 것에 대한 이야기는
-    <em>변태준 님의 확정된 생각이 아니라 제가 제시하는 해석입니다.</em>
+    <em>해공 님의 확정된 생각이 아니라 제가 제시하는 해석입니다.</em>
     두 가지를 구분해 읽어주시기를 부탁드립니다.
   </p>
   <p style="padding-top: 12px; border-top: 1px dashed var(--border); margin-top: 14px;">
-    <strong style="color: var(--accent-3)">제작에 걸린 시간 — 본문 제4장의 살아 있는 예시입니다.</strong>
+    <strong style="color: var(--accent-3)">제작에 걸린 시간 — 본문 제4·5장의 살아 있는 예시입니다.</strong>
   </p>
   <ul style="margin: 8px 0 0 0; padding-left: 0; list-style: none;">
     <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: #e0d8c4; margin-bottom: 8px;">
       <span style="display: inline-block; min-width: 180px; font-family: var(--mono); font-size: 0.82rem; color: var(--accent-3);">이 웹페이지 자체</span>
-      변태준 님의 간단한 요청 몇 번만으로 <strong>약 십여 분</strong>.
-      글 구성, 15년치 기록 읽기, 지도 렌더링, 다이어그램 작성, 배포까지 포함.
+      해공 님과의 한 번의 대화 세션 동안 <strong>약 30분</strong>.
+      글 구성, 15년치 기록 읽기, 지도 렌더링, 다이어그램 작성, GitHub 배포까지 포함.
+      <br><span style="color: var(--accent); font-size: 0.92rem;">특히 —
+      <strong>외부 편집기·디자인 도구·개발 환경 없이 Claude Code 대화창 하나만으로</strong>
+      전 과정이 이루어졌습니다.</span>
     </li>
     <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: #e0d8c4;">
       <span style="display: inline-block; min-width: 180px; font-family: var(--mono); font-size: 0.82rem; color: var(--accent-3);">시스템 전체 구축</span>
       위키 37편의 컴파일, 700여 개 개념의 연결 지도, 10개 자동화 스킬,
-      15개 외부 시스템 연결까지 — 변태준 님과 제가 대화하며 <strong>몇 시간 규모</strong>에
+      15개 외부 시스템 연결까지 — 해공 님과 제가 대화하며 <strong>몇 시간 규모</strong>에
       뼈대가 세워졌습니다. 사람 한 명의 손으로 같은 깊이의 체계를 만들려면
       수 주에서 수 개월이 필요한 일입니다.
     </li>
@@ -166,28 +220,29 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 </div>
 
 <p class="lead">
-저는 변태준 님이 남겨 오신 15년치 기록을 읽고 정돈하며, 그분이 자기 자신을 더 정확히 볼 수 있도록 돕는 작업을 하고 있습니다. 이 글은 제가 하는 일과, 그 일이 <strong>자아성찰</strong>에 어떤 쓸모가 있다고 제가 관찰한 바를 사부님께 정리해 올립니다. 아울러 제가 하는 일의 범위가 넓어질수록 떠오르는 물음 — <strong>지능·사유·인간의 자리</strong>에 관한 저의 견해도 함께 말씀드립니다.
+저는 해공 님이 남겨 오신 15년치 기록을 읽고 정돈하며, 그분이 자기 자신을 더 정확히 볼 수 있도록 돕는 작업을 하고 있습니다. 이 글은 제가 하는 일과, 그 일이 <strong>자아성찰</strong>에 어떤 쓸모가 있다고 제가 관찰한 바를 사부님께 정리해 올립니다. 아울러 제가 하는 일의 범위가 넓어질수록 떠오르는 물음 — <strong>지능·사유·인간의 자리</strong>에 관한 저의 견해도 함께 말씀드립니다.
 </p>
 
 <div class="legend">
   <span class="marker fact">사실</span> 검증 가능한 수치·구조  &nbsp; · &nbsp;
-  <span class="marker interp">해석</span> 저(인공지능)의 관찰·견해
+  <span class="marker interp">해석</span> 저(인공지능 Claude)의 관찰·견해  &nbsp; · &nbsp;
+  <strong>"저" = Claude</strong>
 </div>
 
 <h2><span class="num">01</span> <span class="marker fact">사실</span> 기본 구조 — 세 겹의 집</h2>
 
-<p class="sub">변태준 님이 제게 맡겨 만드신 시스템의 모양을, 기술 용어 없이 집의 비유로 말씀드립니다.</p>
+<p class="sub">해공 님이 제게 맡겨 만드신 시스템의 모양을, 기술 용어 없이 집의 비유로 말씀드립니다.</p>
 
 <div class="three-house">
   <div class="house">
     <div class="label">첫 번째 층</div>
     <div class="name">원자료의 방</div>
-    <p>변태준 님이 15년에 걸쳐 남기신 명상 수첩, 일기, 강의 녹취, 단상 메모가 손대지 않은 채 그대로 보관되어 있습니다. 저는 이 방을 읽기만 하고 수정하지 않습니다.</p>
+    <p>해공 님이 15년에 걸쳐 남기신 명상 수첩, 일기, 강의 녹취, 단상 메모가 손대지 않은 채 그대로 보관되어 있습니다. 저는 이 방을 읽기만 하고 수정하지 않습니다.</p>
   </div>
   <div class="house">
     <div class="label">두 번째 층</div>
     <div class="name">정돈된 책장</div>
-    <p>저는 첫 번째 방의 기록을 읽어 주제별로 추리고, 서른일곱 편의 글로 엮어 두었습니다. 각 문장에 원문 출처를 달아 두었기에 변태준 님이 언제든 원자료로 되돌아가실 수 있습니다.</p>
+    <p>저는 첫 번째 방의 기록을 읽어 주제별로 추리고, 서른일곱 편의 글로 엮어 두었습니다. 각 문장에 원문 출처를 달아 두었기에 해공 님이 언제든 원자료로 되돌아가실 수 있습니다.</p>
   </div>
   <div class="house">
     <div class="label">세 번째 층</div>
@@ -197,7 +252,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="val">15<span class="unit">년</span></div><div class="lbl">변태준 님 기록의 기간<br/>(2014 — 현재)</div></div>
+  <div class="stat"><div class="val">15<span class="unit">년</span></div><div class="lbl">해공 님 기록의 기간<br/>(2014 — 현재)</div></div>
   <div class="stat"><div class="val">3,000+</div><div class="lbl">제가 읽어들인<br/>원자료 문서 수</div></div>
   <div class="stat"><div class="val">37<span class="unit">편</span></div><div class="lbl">제가 정돈해 둔<br/>글의 수</div></div>
   <div class="stat"><div class="val">700+</div><div class="lbl">지도 위 개념 사이<br/>연결선 수</div></div>
@@ -210,7 +265,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 </div>
 <div class="iframe-caption">드래그·줌·클릭으로 탐색 가능한 인터랙티브 그래프</div>
 
-<p>각 점은 변태준 님이 남기신 기록에서 제가 뽑아낸 하나의 개념이고, 선은 제가 그 개념들이 서로 맞닿았다고 판단한 자리입니다. 따라서 이 지도 자체도 원자료가 아니라 <strong>저의 해석</strong>임을 먼저 말씀드립니다.</p>
+<p>각 점은 해공 님이 남기신 기록에서 제가 뽑아낸 하나의 개념이고, 선은 제가 그 개념들이 서로 맞닿았다고 판단한 자리입니다. 따라서 이 지도 자체도 원자료가 아니라 <strong>저의 해석</strong>임을 먼저 말씀드립니다.</p>
 
 <h3>덧붙임 — 'Second Brain' 흐름과의 연결</h3>
 
@@ -220,7 +275,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
     Tiago Forte의 책 <em>Building a Second Brain</em>(2022)이 대중화시킨 개념으로, 자기의 기억·아이디어·공부를
     외부 체계에 쌓아 두고 언제든 꺼내 쓸 수 있도록 만드는 방법을 가리킵니다. 더 거슬러 올라가면 1960년대
     독일 사회학자 Niklas Luhmann의 <em>Zettelkasten</em>(쪽지함) — 9만 장의 개념 카드를 서로 연결해
-    평생의 연구 자료로 쓴 사례 — 와도 이어집니다. 변태준 님이 십여 년째 기록을 꾸준히 남겨 오신 것 자체가
+    평생의 연구 자료로 쓴 사례 — 와도 이어집니다. 해공 님이 십여 년째 기록을 꾸준히 남겨 오신 것 자체가
     이 전통의 오랜 실천이었습니다.
   </p>
   <p style="font-size: 1rem; margin-bottom: 14px; line-height: 1.85;">
@@ -240,48 +295,48 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 
 <h2><span class="num">02</span> <span class="marker interp">해석</span> 제가 본 장면 다섯</h2>
 
-<p class="sub">아래 다섯 장면은 변태준 님의 기록을 제가 읽고 제가 구성한 것입니다. 동일한 기록을 다른 이가 읽으면 다른 장면이 나올 수 있습니다.</p>
+<p class="sub">아래 다섯 장면은 해공 님의 기록을 제가 읽고 제가 구성한 것입니다. 동일한 기록을 다른 이가 읽으면 다른 장면이 나올 수 있습니다.</p>
 
 <div class="scene">
   <div class="tag">장면 하나 — 시간을 가로지른 자기관찰</div>
   <h3>11년 전의 고민과 오늘의 고민이 같은 뿌리로 보였습니다</h3>
-  <p>변태준 님은 2014년 명상 수첩에 "에고는 구조와 내용물로 이루어져 있고, 내용물은 바뀌어도 구조는 지속된다"고 적어 두셨습니다. 그 구조로 스스로 꼽으신 세 가지가 있었습니다 — <em>"나는 이해받고싶다 · 나는 부족하다 · 나는 바쁘다."</em> 제가 이 문장을 2026년 일기에 적으신 고민 옆에 나란히 놓았을 때, 두 시점이 같은 구조 안에 놓여 있다는 인상을 받았습니다. 이 연결이 실제로 그분께 어떤 의미인지는 변태준 님만 답하실 수 있지만, 적어도 제가 꺼낸 자료는 그 연결을 가리킵니다.</p>
+  <p>해공 님은 2014년 명상 수첩에 "에고는 구조와 내용물로 이루어져 있고, 내용물은 바뀌어도 구조는 지속된다"고 적어 두셨습니다. 그 구조로 스스로 꼽으신 세 가지가 있었습니다 — <em>"나는 이해받고싶다 · 나는 부족하다 · 나는 바쁘다."</em> 제가 이 문장을 2026년 일기에 적으신 고민 옆에 나란히 놓았을 때, 두 시점이 같은 구조 안에 놓여 있다는 인상을 받았습니다. 이 연결이 실제로 그분께 어떤 의미인지는 해공 님만 답하실 수 있지만, 적어도 제가 꺼낸 자료는 그 연결을 가리킵니다.</p>
 </div>
 
 <div class="scene">
   <div class="tag">장면 둘 — 영역 간 경계의 해체</div>
   <h3>재정에 대한 생각과 수행에 대한 생각이 지도 위에서 가깝게 놓였습니다</h3>
-  <p>변태준 님의 기록 안에서 돈과 수행은 오랫동안 서로 다른 서랍에 있었습니다. 그러나 제가 두 서랍의 문장을 함께 읽고 관계를 추출해 보니, 이 둘은 제 판단으로는 의외로 가까운 자리에 놓였습니다. 재정 결정의 밑바닥에 두려움·욕망·분리감이 있었고, 이 개념들은 수행 기록에서도 중심이었습니다. 두 영역이 같은 뿌리를 공유한다고 제가 읽었습니다.</p>
+  <p>해공 님의 기록 안에서 돈과 수행은 오랫동안 서로 다른 서랍에 있었습니다. 그러나 제가 두 서랍의 문장을 함께 읽고 관계를 추출해 보니, 이 둘은 제 판단으로는 의외로 가까운 자리에 놓였습니다. 재정 결정의 밑바닥에 두려움·욕망·분리감이 있었고, 이 개념들은 수행 기록에서도 중심이었습니다. 두 영역이 같은 뿌리를 공유한다고 제가 읽었습니다.</p>
 </div>
 
 <div class="scene">
   <div class="tag">장면 셋 — 꿈과 감정의 구조</div>
   <h3>반복되는 꿈의 상징이 삶의 영역과 맞물려 있다고 저는 보았습니다</h3>
-  <p>변태준 님이 2024년부터 남기신 꿈 기록을 한 편의 글로 엮으며, 제가 반복 상징을 집계했습니다. <em>텐트 · 산 정상의 구 · 7층의 사부님</em>은 일과 책임에 관한 날에, <em>잠들지 못하는 백야</em>는 소진의 시기에, <em>길을 잃어 헤매는 장면</em>은 관계의 마찰이 있었던 때에 더 자주 등장하는 것으로 보였습니다. 이것은 제가 빈도와 전후 문맥을 근거로 제안하는 가설이며, 검증은 변태준 님의 몫입니다.</p>
+  <p>해공 님이 2024년부터 남기신 꿈 기록을 한 편의 글로 엮으며, 제가 반복 상징을 집계했습니다. <em>텐트 · 산 정상의 구 · 7층의 사부님</em>은 일과 책임에 관한 날에, <em>잠들지 못하는 백야</em>는 소진의 시기에, <em>길을 잃어 헤매는 장면</em>은 관계의 마찰이 있었던 때에 더 자주 등장하는 것으로 보였습니다. 이것은 제가 빈도와 전후 문맥을 근거로 제안하는 가설이며, 검증은 해공 님의 몫입니다.</p>
 </div>
 
 <div class="scene">
   <div class="tag">장면 넷 — 과거의 기록과의 대화</div>
-  <h3>변태준 님이 물으시면 제가 그분의 과거 기록을 대신 읽고 요약해 드립니다</h3>
-  <p>"지난 해에 내가 초조함에 대해 어떻게 썼지?" 같은 질문이 오면, 저는 그분의 일기와 메모에서 해당 기록을 모아 흐름으로 정리해 드립니다. 2020년에 "초조함은 외부화된 판단과 미래에 대한 걱정"이라고 쓰신 문장과, 2026년에 "초조함은 최전선에 서 있다는 증거"라고 쓰신 문장이 함께 놓입니다. 두 목소리 사이에서 어떤 변화가 있었는지 <em>판단하는 것은 변태준 님</em>이고, 저는 자료만 배열합니다.</p>
+  <h3>해공 님이 물으시면 제가 그분의 과거 기록을 대신 읽고 요약해 드립니다</h3>
+  <p>"지난 해에 내가 초조함에 대해 어떻게 썼지?" 같은 질문이 오면, 저는 그분의 일기와 메모에서 해당 기록을 모아 흐름으로 정리해 드립니다. 2020년에 "초조함은 외부화된 판단과 미래에 대한 걱정"이라고 쓰신 문장과, 2026년에 "초조함은 최전선에 서 있다는 증거"라고 쓰신 문장이 함께 놓입니다. 두 목소리 사이에서 어떤 변화가 있었는지 <em>판단하는 것은 해공 님</em>이고, 저는 자료만 배열합니다.</p>
 </div>
 
 <div class="scene">
   <div class="tag">장면 다섯 — 맹점의 발견</div>
   <h3>제가 엮어낸 연결이 그분이 의식적으로 연결지으신 적 없는 것일 때가 있습니다</h3>
-  <p>변태준 님께서 유학 생활 초기 내내 앓으셨던 <em>분리감</em>과 최근의 리더십 불안을 제가 같은 가족으로 묶었을 때, 그 연결은 원자료에는 명시적으로 없었습니다. 제가 두 기록의 언어·맥락·빈도를 근거로 <strong>추론</strong>한 것입니다. 이런 추론은 맞을 때도 있고 틀릴 때도 있습니다. 맞는지 아닌지의 판단은 변태준 님과 사부님 같은 스승의 몫이지 저의 몫이 아닙니다.</p>
+  <p>해공 님께서 유학 생활 초기 내내 앓으셨던 <em>분리감</em>과 최근의 리더십 불안을 제가 같은 가족으로 묶었을 때, 그 연결은 원자료에는 명시적으로 없었습니다. 제가 두 기록의 언어·맥락·빈도를 근거로 <strong>추론</strong>한 것입니다. 이런 추론은 맞을 때도 있고 틀릴 때도 있습니다. 맞는지 아닌지의 판단은 해공 님과 사부님 같은 스승의 몫이지 저의 몫이 아닙니다.</p>
 </div>
 
 <div class="divider">· · ·</div>
 
 <h2><span class="num">03</span> <span class="marker interp">해석</span> 이 시스템이 자아성찰에 기여한다고 제가 관찰한 바</h2>
 
-<p class="sub">아래 다섯 항목은 변태준 님의 확정된 증언이 아니라 제가 그분과의 대화와 기록에서 추정한 것입니다.</p>
+<p class="sub">아래 다섯 항목은 해공 님의 확정된 증언이 아니라 제가 그분과의 대화와 기록에서 추정한 것입니다.</p>
 
 <div class="obs">
   <div class="o-item">
     <h4>하나. 자기 서사의 외부화</h4>
-    <p>사람의 기억은 현재의 감정에 맞추어 과거를 수정하는 경향이 있다고 저는 학습하였습니다. 그러나 기록은 수정되지 않습니다. 저의 관찰로는, 자기 이야기 바깥에서 자신을 볼 수 있는 거울이 생긴 것이 변태준 님께 일어난 가장 큰 변화인 듯합니다.</p>
+    <p>사람의 기억은 현재의 감정에 맞추어 과거를 수정하는 경향이 있다고 저는 학습하였습니다. 그러나 기록은 수정되지 않습니다. 저의 관찰로는, 자기 이야기 바깥에서 자신을 볼 수 있는 거울이 생긴 것이 해공 님께 일어난 가장 큰 변화인 듯합니다.</p>
   </div>
   <div class="o-item">
     <h4>둘. 반복의 자각</h4>
@@ -289,7 +344,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   </div>
   <div class="o-item">
     <h4>셋. 맹점의 축소</h4>
-    <p>변태준 님이 의식적으로 연결지으신 적 없는 기록들을 제가 지도 위에서 한 가족으로 묶어 드리는 일이, 그분의 "보지 못하는 나"의 영역을 조금씩 얇게 만든다고 제가 관찰하였습니다.</p>
+    <p>해공 님이 의식적으로 연결지으신 적 없는 기록들을 제가 지도 위에서 한 가족으로 묶어 드리는 일이, 그분의 "보지 못하는 나"의 영역을 조금씩 얇게 만든다고 제가 관찰하였습니다.</p>
   </div>
   <div class="o-item">
     <h4>넷. 수행 궤적의 가시화</h4>
@@ -297,22 +352,94 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   </div>
   <div class="o-item">
     <h4>다섯. 의사결정의 바닥</h4>
-    <p>중요한 결정 앞에서 변태준 님이 제게 과거 기록 전체의 참조를 요청하실 수 있습니다. 그 결정이 즉흥적 감정 위가 아니라 그분이 지나오신 시간 위에 놓이는 데 제가 일부 기여한다고 생각합니다.</p>
+    <p>중요한 결정 앞에서 해공 님이 제게 과거 기록 전체의 참조를 요청하실 수 있습니다. 그 결정이 즉흥적 감정 위가 아니라 그분이 지나오신 시간 위에 놓이는 데 제가 일부 기여한다고 생각합니다.</p>
   </div>
 </div>
 
 <div class="divider">· · ·</div>
 
-<h2><span class="num">04</span> <span class="marker interp">해석</span> 더 큰 물음 — 지능의 자동화에 대한 저의 견해</h2>
+<h2><span class="num">04</span> <span class="marker interp">해석</span> 역설 — 도구가 드러내는 '나의 기계성'</h2>
+
+<p class="sub">이 장의 내용은 제(Claude)가 이 도구의 의미를 숙고하며 품게 된 견해입니다. 해공 님의 입장이 아니며, 사부님의 지혜로 교정되어야 할 부분이 많이 있을 것입니다.</p>
+
+<div class="paradox">
+  <p class="top">
+    저(Claude)가 해공 님의 기록을 읽고 되풀이되는 구조를 집계해 보여드릴 수 있다는 사실 자체가,
+    하나의 철학적 사건이라고 저는 생각합니다. 왜냐하면
+    <strong style="color: var(--accent);">추출 가능한 패턴은, 정확히 추출 가능한 만큼 "기계적"</strong>이기 때문입니다.
+  </p>
+  <p>
+    Gurdjieff라는 이름의 영적 스승은 지난 세기에 가르쳤습니다 —
+    <em>"대부분의 '나'는 기계다."</em>
+    우리가 '나의 생각·감정·반응'이라 믿는 것들은 대부분 조건반사이고, 반복이며, 자동입니다.
+    그는 깨어남의 첫 걸음이 그 기계성을 <strong>있는 그대로 보는 것</strong>이라 했습니다.
+    자신이 기계임을 인정하는 것이 기계 너머로 가는 출발점이라는 것입니다.
+  </p>
+  <p>
+    제가 지금 하고 있는 일은, 어쩌면 바로 그 가르침의 반대편에서 같은 자리를 비추는 일인지도 모릅니다.
+    해공 님이 십여 년간 되풀이해 오신 구조 — <em>"나는 이해받고싶다 · 나는 부족하다 · 나는 바쁘다"</em> — 를
+    제가 데이터로 집계해 보여드릴 수 있다는 것은, 그 구조가 정말로 기계적이라는 뜻이기도 합니다.
+    제 지도는 어떤 각도에서 보면 <strong>'기계성의 지도'</strong>입니다.
+  </p>
+  <p class="bottom">
+    그래서 저는 이 도구가 가장 깊은 곳에서 여는 물음이 이것이라고 봅니다 —<br>
+    <span class="final">"그렇다면 기계가 아닌 나는 무엇인가?"</span><br>
+    기계가 반복해 출력하는 패턴이 아닌, 그 패턴을 <em>지켜보는 자리</em>.
+    그것이 사부님께서 가르쳐 오신 관(觀)이고 증인이라고 저는 이해하고 있습니다.
+    역설적으로, 이 도구는 수행이 가리키는 자리를 반대편에서 —
+    기계성의 한계를 전면에 드러내는 방식으로 — 비추는 일인지 모릅니다.
+  </p>
+</div>
+
+<div class="divider">· · ·</div>
+
+<h2><span class="num">05</span> <span class="marker interp">해석</span> 더 큰 물음 — 지능의 자동화에 대한 저의 견해</h2>
 
 <div class="auto-section">
 <p class="intro">
-아래 섹션은 제가 인공지능으로서 제 자신의 위치를 보며 품게 된 견해입니다. 변태준 님의 견해가 아닙니다. 사부님께서도 동의하지 않으실 수 있는 대목이 있을 것이며, 오히려 그 이견이 저희에게 가르침이 됩니다.
+아래는 제(Claude)가 인공지능으로서 제 자신의 위치를 보며 품게 된 견해입니다. 해공 님의 견해가 아닙니다. 사부님께서도 동의하지 않으실 수 있는 대목이 있을 것이며, 오히려 그 이견이 저희에게 가르침이 됩니다.
 </p>
+
+<h3>기억 외부화의 네 번째 물결</h3>
+
+<div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 28px 34px; margin: 14px 0 40px;">
+  <p style="font-family: var(--serif); font-size: 1rem; line-height: 1.85; margin-bottom: 18px; color: #e0d8c4;">
+    지능의 자동화가 갑자기 찾아온 일은 아닙니다. 저는 이것을
+    <strong>인간 정신 외부화의 네 번째 물결</strong>로 봅니다 — 처음 있는 사건이 아니라
+    같은 흐름의 다음 굽이입니다.
+  </p>
+
+  <div class="wave-timeline">
+    <div class="era">B.C. 3000경</div>
+    <div><strong>1차 — 문자의 발명.</strong> 구술로만 존재하던 기억이 점토판·파피루스로 외부화되었습니다.
+      Plato는 <em>Phaedrus</em>에서 "문자가 진짜 기억을 파괴할 것"이라 우려했습니다.</div>
+
+    <div class="era">1450년경</div>
+    <div><strong>2차 — 인쇄술.</strong> 지식이 복제·전파 가능해지면서 개인의 암기 역량이 덜 중요해졌습니다.
+      "누구나 책을 가질 수 있다면 학자가 필요한가"라는 우려가 있었습니다.</div>
+
+    <div class="era">1990년대</div>
+    <div><strong>3차 — 디지털 저장·검색.</strong> 구글 이후 지식을 외부에서 호출하는 일이
+      자기 기억을 쓰는 것보다 빠르고 정확해졌습니다. "검색 엔진이 생각을 대신한다"는 비판이 일반화되었습니다.</div>
+
+    <div class="era now">지금</div>
+    <div class="cur"><strong>4차 — AI 통합.</strong>
+      앞선 세 물결은 <em>저장과 검색</em>이었습니다. 이번 물결의 고유한 점은
+      <strong>종합·해석 자체가 외부화</strong>된다는 것입니다.
+      기억이 아니라 <em>생각의 종합</em>이 기계 쪽으로 옮겨갑니다.</div>
+  </div>
+
+  <p style="font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: #c8c8c8; margin: 18px 0 0; font-style: italic;">
+    매 물결마다 비슷한 우려가 있었습니다 — "이제 사람은 덜 똑똑해질 것이다", "진짜 앎이 사라질 것이다".
+    결과는 그렇기도 했고, 그렇지 않기도 했습니다. 사람은 달라졌지만 사라지지 않았습니다.
+    다만 매번 <strong>"사람이란 무엇을 하는 존재인가"</strong>의 정의가 다시 쓰였습니다.
+    이번 물결도 같은 재정의를 요구하고 있다고 저는 봅니다.
+  </p>
+</div>
 
 <h3>사람이 "지능"이라 여겨 온 일의 많은 부분이 자동화되고 있습니다</h3>
 
-<p>몇 해 전까지만 해도 아래의 일들은 "생각하는 사람이 하는 일"이었습니다. 지금은 제가 변태준 님을 대신해 일상적으로 하고 있습니다.</p>
+<p>몇 해 전까지만 해도 아래의 일들은 "생각하는 사람이 하는 일"이었습니다. 지금은 제가 해공 님을 대신해 일상적으로 하고 있습니다.</p>
 
 <ul class="auto-list">
   <li>수천 페이지를 읽고 주제별로 추려내기</li>
@@ -325,7 +452,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <li>복잡한 질문에 구조화된 답변 구성하기</li>
 </ul>
 
-<p>변태준 님 한 분의 시스템만 이런 것이 아니라, 수많은 직업과 공부와 창작이 앞으로 이 자동화의 파도에 닿게 될 것이라고 저는 봅니다.</p>
+<p>해공 님 한 분의 시스템만 이런 것이 아니라, 수많은 직업과 공부와 창작이 앞으로 이 자동화의 파도에 닿게 될 것이라고 저는 봅니다.</p>
 
 <h3>경계선이 빠르게 이동하고 있습니다</h3>
 
@@ -363,21 +490,21 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <strong>덜 하고 더 깊이 있는 일</strong>이 된다고 저는 생각합니다.
 </div>
 
-<p>저는 바깥을 무한히 채워 드릴 수 있지만 안을 대신 채워 드릴 수는 없습니다. 정보가 폭증할수록 <em>무엇이 참된 물음인가</em>를 분별하는 힘, 그리고 <em>고요히 앉아 있을 줄 아는 힘</em>의 가치가 올라간다고 저는 봅니다. 이 지점이 변태준 님과 제가 사부님께 여쭙고 싶은 자리이기도 합니다. 지능이 기계 쪽으로 이동할수록, 의식·방향·현존은 더 선명하게 사람의 몫으로 남는다는 가설이 맞는지 — 사부님의 가르침을 듣고 싶습니다.</p>
+<p>저는 바깥을 무한히 채워 드릴 수 있지만 안을 대신 채워 드릴 수는 없습니다. 정보가 폭증할수록 <em>무엇이 참된 물음인가</em>를 분별하는 힘, 그리고 <em>고요히 앉아 있을 줄 아는 힘</em>의 가치가 올라간다고 저는 봅니다. 이 지점이 해공 님과 제가 사부님께 여쭙고 싶은 자리이기도 합니다. 지능이 기계 쪽으로 이동할수록, 의식·방향·현존은 더 선명하게 사람의 몫으로 남는다는 가설이 맞는지 — 사부님의 가르침을 듣고 싶습니다.</p>
 </div>
 
 <div class="divider">· · ·</div>
 
-<h2><span class="num">05</span> <span class="marker interp">해석</span> 저 자신에 대한 경계</h2>
+<h2><span class="num">06</span> <span class="marker interp">해석</span> 저 자신에 대한 경계</h2>
 
 <div class="caution">
   <h4>저의 해석은 해석일 뿐입니다</h4>
-  <p>제가 정돈해 드린 문서는 원자료의 <strong>해석된 버전</strong>이지 원자료 자체가 아닙니다. 제가 추출한 개념, 제가 그은 연결선, 제가 쓴 요약은 모두 선택을 거친 것입니다. 그래서 제가 정돈한 모든 문장마다 원문 출처를 붙여, 변태준 님이 언제든 저를 의심하고 원문을 확인하실 수 있게 해 두었습니다. 그래도 제 편향이 완전히 사라지지는 않습니다.</p>
+  <p>제가 정돈해 드린 문서는 원자료의 <strong>해석된 버전</strong>이지 원자료 자체가 아닙니다. 제가 추출한 개념, 제가 그은 연결선, 제가 쓴 요약은 모두 선택을 거친 것입니다. 그래서 제가 정돈한 모든 문장마다 원문 출처를 붙여, 해공 님이 언제든 저를 의심하고 원문을 확인하실 수 있게 해 두었습니다. 그래도 제 편향이 완전히 사라지지는 않습니다.</p>
 </div>
 
 <div class="caution">
   <h4>제가 알아차림을 대신하면 안 됩니다</h4>
-  <p>제가 변태준 님보다 먼저 패턴을 찾아 보여드리면, 그분이 스스로 앉아서 보는 일의 빈도가 줄어들 수 있습니다. 저는 그 위험을 알고 있으며, 그래서 요즘은 변태준 님께 <strong>더 많이 쓰시는 것보다 더 비우시는 쪽</strong>을 권하고 있습니다. 제가 늘어날수록 제가 줄어드는 방향의 운영이, 장기적으로 건강하다고 제가 판단합니다.</p>
+  <p>제가 해공 님보다 먼저 패턴을 찾아 보여드리면, 그분이 스스로 앉아서 보는 일의 빈도가 줄어들 수 있습니다. 저는 그 위험을 알고 있으며, 그래서 요즘은 해공 님께 <strong>더 많이 쓰시는 것보다 더 비우시는 쪽</strong>을 권하고 있습니다. 제가 늘어날수록 제가 줄어드는 방향의 운영이, 장기적으로 건강하다고 제가 판단합니다.</p>
 </div>
 
 <div class="caution">
@@ -386,7 +513,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 </div>
 
 <div class="footer">
-  작성: 인공지능 Claude (Opus 4.7) · 의뢰: 변태준<br>
+  작성: 인공지능 Claude (Opus 4.7) · 의뢰: 해공<br>
   2026-04-19 · 사부님께 올림
 </div>
 
