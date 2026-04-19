@@ -152,6 +152,9 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 .tj-voice .intro-line { font-family: var(--serif); font-size: 1rem; color: #d8d8d8; margin-bottom: 18px; line-height: 1.85; font-style: italic; }
 .tj-voice blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 20px 0; font-family: var(--serif); font-size: 1.08rem; line-height: 1.9; color: #e8c7a8; font-weight: 500; }
 .tj-voice .reflect { font-family: var(--serif); font-size: 1rem; color: #d0d0d0; line-height: 1.9; margin-top: 18px; margin-bottom: 0; padding-top: 16px; border-top: 1px solid var(--border); }
+.tj-voice .reflect p { margin-bottom: 14px; font-size: 1rem; line-height: 1.9; color: #d0d0d0; }
+.tj-voice .reflect p:last-child { margin-bottom: 0; }
+.tj-voice blockquote + blockquote { margin-top: 10px; }
 .tj-voice .sig { font-family: var(--mono); font-size: 0.78rem; color: var(--accent); text-align: right; margin-top: 14px; letter-spacing: 0.05em; }
 
 /* Paradox box — patterns of mechanicality */
@@ -495,23 +498,64 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 <div class="tj-voice">
   <div class="label">해공 님의 덧붙임 — 문서 중 유일하게 해공 님 본인의 목소리입니다</div>
   <p class="intro-line">
-    제(Claude)가 이 글을 쓰던 중 해공 님이 한 가지 생각을 덧붙이셨습니다. 그대로 옮겨 두겠습니다.
+    제(Claude)가 이 글을 쓰던 중 해공 님이 두 가지 생각을 덧붙이셨습니다. 그대로 옮겨 두겠습니다.
   </p>
+
   <blockquote>
     "높은 수준의 추상적 사유를 할 수 있는 사람, 그리고 보는 눈이 있는 사람에게는
     인공지능을 활용해서 할 수 있는 일이 아주 많다. 다만 도구적·기능적 수준에 머물러 있는 사람에게는
     이 기술이 매우 실존적인 위협으로 다가온다."
   </blockquote>
+
+  <blockquote>
+    "기능적인 how에 대한 앎은 대부분 쓸모가 없어졌다.
+    what과 why를 아는 사람에게는 예전보다 훨씬 큰 레버리지가 주어졌다.
+    직원을 고용하고 회사를 만들지 않고도, 사람보다 훨씬 저렴한 인공지능을 이용해
+    순식간에 큰 창조물을 만들 수 있다.
+    사람에게 필요한 것은 점들을 선과 면으로 연결할 수 있는 날카로운 시각과 감각이다.
+    고차원의 영적 능력들이 오히려 중요해지고 있다."
+  </blockquote>
+
   <div class="sig">— 해공</div>
-  <p class="reflect">
-    이 덧붙임은 제가 위에서 말씀드린 '사람에게 남는 세 가지(방향·체화된 앎·있음)'에 중요한 단서 하나를 더합니다 —
-    <strong>그 세 가지가 누구에게나 균등하게 주어진 것은 아니라는 사실</strong>입니다.
-    추상적 사유의 힘과 '보는 눈'은 태어날 때 완성되어 오는 것이 아니라 길러지는 능력이며,
-    그 능력을 기르는 가장 오래된 방법이 바로 수행이었다고 저는 이해합니다.
-    그런 의미에서 이 기술의 시대는 <em>수행한 사람과 그렇지 않은 사람 사이의 격차를 드러내는 시대</em>가
-    될 가능성이 있습니다. 사부님의 영역이 덜 중요해지는 것이 아니라, 오히려
-    <strong>더 결정적이 되는 시기</strong>일지 모릅니다.
-  </p>
+
+  <div class="reflect">
+    <p>
+      이 두 덧붙임은 위에서 제가 말씀드린 '사람에게 남는 세 가지(방향·체화된 앎·있음)'를
+      한층 선명하게 해줍니다.
+    </p>
+
+    <p>
+      <strong style="color: var(--accent);">how의 평준화.</strong>
+      그동안 "일하는 사람"의 경쟁력이었던 기능적 절차 지식은
+      이제 인공지능이 값싸고 빠르게 대신 제공합니다.
+      경쟁력의 무게 중심이 <em>"어떻게"</em>에서 <strong>"무엇을(what)"과 "왜(why)"</strong>로
+      이동하고 있습니다.
+    </p>
+
+    <p>
+      <strong style="color: var(--accent);">개인의 레버리지 폭발.</strong>
+      과거에 큰 창조물을 만들려면 직원을 고용하고 회사를 세워야 했습니다.
+      지금은 한 사람이 인공지능과 함께 같은 일을
+      <em>훨씬 빨리, 훨씬 적은 비용으로</em> 해냅니다.
+      사부님께서 지금 읽고 계신 이 웹페이지 자체가 그 작은 증거입니다 —
+      한 사람이 인공지능과 함께, 약 30분 안에 만들었습니다.
+    </p>
+
+    <p>
+      <strong style="color: var(--accent);">영적 역량의 부상.</strong>
+      점을 선과 면으로 잇는 "날카로운 시각과 감각"은 학습된 절차가 아니라
+      <em>키워진 시야</em>입니다. 방향을 세우는 힘, 무엇이 진짜 중요한가를 아는 눈,
+      흩어진 것을 하나로 꿰는 감각 — 이것들은 오래전부터 <strong>수행이 길러 온</strong>
+      역량들이라고 저는 이해합니다. 이 기술의 시대는 그 역량을 덜 중요하게 만드는 것이 아니라,
+      <strong>오히려 결정적이 되게</strong> 하고 있습니다.
+    </p>
+
+    <p style="padding-top: 6px;">
+      역설적으로, 인공지능의 폭발은 기능적 지식의 시장 가치를 떨어뜨리는 동시에,
+      오래된 영적 수련이 길러 온 역량의 가치를 — <em>세속적 의미에서조차</em> — 올리고 있습니다.
+      해공 님의 관찰이 가리키는 곳이 바로 이 자리입니다.
+    </p>
+  </div>
 </div>
 
 <div class="big-quote">
