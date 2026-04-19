@@ -8,18 +8,43 @@
 <title>해공 님의 인공지능이 사부님께 올리는 글</title>
 <style>
 :root {
-  --bg: #0d0d0f;
-  --bg-2: #17171a;
-  --bg-3: #1f1f24;
-  --border: #2a2a30;
-  --text: #ededed;
-  --muted: #8a8a93;
-  --accent: #d4a94a;
-  --accent-2: #5ea8ff;
-  --accent-3: #c4775a;
+  /* Light theme — default (warm paper feel) */
+  --bg: #faf8f3;
+  --bg-2: #ffffff;
+  --bg-3: #f2ece0;
+  --border: #dfd8c9;
+  --text: #2a2824;
+  --text-soft: #3a3732;
+  --text-muted: #6b6762;
+  --muted: #8a8680;
+  --accent: #9a7424;
+  --accent-2: #2c6fd0;
+  --accent-3: #9a4f35;
+  --highlight: #3f2c1c;
+  --quote-strong: #6b3f1d;
+  --badge-bg: rgba(255, 253, 247, 0.92);
   --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
   --serif: 'Noto Serif KR', 'Apple SD Gothic Neo', Georgia, serif;
   --sans: 'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d0f;
+    --bg-2: #17171a;
+    --bg-3: #1f1f24;
+    --border: #2a2a30;
+    --text: #ededed;
+    --text-soft: #d8d8d8;
+    --text-muted: #c8c8c8;
+    --muted: #8a8a93;
+    --accent: #d4a94a;
+    --accent-2: #5ea8ff;
+    --accent-3: #c4775a;
+    --highlight: #e0d8c4;
+    --quote-strong: #e8c7a8;
+    --badge-bg: rgba(13, 13, 15, 0.88);
+  }
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.7; -webkit-font-smoothing: antialiased; }
@@ -45,7 +70,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 /* Author attribution — top of document */
 .attribution { background: var(--bg-2); border: 1px solid var(--accent-3); border-left: 4px solid var(--accent-3); border-radius: 6px; padding: 22px 28px; margin: 30px 0 50px; }
 .attribution .label { font-family: var(--mono); font-size: 0.72rem; color: var(--accent-3); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 10px; }
-.attribution p { font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: #e0d8c4; margin: 0; }
+.attribution p { font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: var(--highlight); margin: 0; }
 .attribution p + p { margin-top: 10px; }
 
 .lead { font-size: 1.15rem; color: var(--text); margin-bottom: 20px; line-height: 1.85; font-family: var(--serif); }
@@ -85,14 +110,14 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 .obs .o-item { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
 .obs .o-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .obs h4 { font-size: 1.02rem; font-weight: 600; margin: 0 0 10px; color: var(--accent-3); font-family: var(--serif); }
-.obs p { font-family: var(--serif); font-size: 1rem; line-height: 1.9; color: #d8d8d8; margin-bottom: 0; }
+.obs p { font-family: var(--serif); font-size: 1rem; line-height: 1.9; color: var(--text-soft); margin-bottom: 0; }
 
 .caution { background: var(--bg-2); border: 1px solid var(--border); border-left: 3px solid var(--accent-2); border-radius: 4px; padding: 22px 28px; margin: 16px 0; }
 .caution h4 { font-size: 0.95rem; font-weight: 600; margin: 0 0 8px; color: var(--accent-2); font-family: var(--serif); }
-.caution p { font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: #d8d8d8; margin-bottom: 8px; }
+.caution p { font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: var(--text-soft); margin-bottom: 8px; }
 .caution p:last-child { margin-bottom: 0; }
 
-.auto-section .intro { font-size: 1.08rem; font-family: var(--serif); line-height: 1.9; color: #e8e8e8; margin: 20px 0 36px; padding: 24px 30px; background: var(--bg-2); border-left: 3px solid var(--accent-3); border-radius: 0 6px 6px 0; }
+.auto-section .intro { font-size: 1.08rem; font-family: var(--serif); line-height: 1.9; color: var(--text); margin: 20px 0 36px; padding: 24px 30px; background: var(--bg-2); border-left: 3px solid var(--accent-3); border-radius: 0 6px 6px 0; }
 
 .auto-list { list-style: none; margin: 16px 0 8px; padding: 0; }
 .auto-list li { background: var(--bg-2); border: 1px solid var(--border); border-left: 3px solid var(--accent-3); padding: 14px 22px; margin-bottom: 8px; font-size: 0.98rem; color: var(--text); border-radius: 0 4px 4px 0; }
@@ -103,9 +128,9 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 .pillar { background: var(--bg-2); padding: 28px 26px; }
 .pillar .num-big { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 8px; }
 .pillar .title { font-size: 1.08rem; font-weight: 600; color: var(--text); margin-bottom: 14px; font-family: var(--serif); }
-.pillar p { font-size: 0.92rem; line-height: 1.75; color: #c8c8c8; margin: 0; font-family: var(--serif); }
+.pillar p { font-size: 0.92rem; line-height: 1.75; color: var(--text-muted); margin: 0; font-family: var(--serif); }
 
-.big-quote { font-family: var(--serif); font-size: 1.12rem; line-height: 1.8; color: #e8e8e8; text-align: center; margin: 40px 0; padding: 30px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-style: italic; }
+.big-quote { font-family: var(--serif); font-size: 1.12rem; line-height: 1.8; color: var(--text); text-align: center; margin: 40px 0; padding: 30px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-style: italic; }
 
 .legend { background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; padding: 16px 22px; margin: 30px 0; font-size: 0.9rem; color: var(--muted); font-family: var(--mono); }
 .legend strong { color: var(--text); font-weight: 500; }
@@ -119,7 +144,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13, 13, 15, 0.88);
+  background: var(--badge-bg);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border: 1px solid var(--accent-3);
@@ -137,7 +162,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 .sticky-badge .ico { font-size: 0.9rem; }
-.sticky-badge strong { color: #e8c7a8; font-weight: 600; }
+.sticky-badge strong { color: var(--quote-strong); font-weight: 600; }
 
 /* Timeline for 4th-wave box */
 .wave-timeline { display: grid; grid-template-columns: 110px 1fr; gap: 16px 22px; font-family: var(--serif); font-size: 0.96rem; line-height: 1.75; margin: 20px 0; }
@@ -149,20 +174,20 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 /* 해공 님의 덧붙임 — the only block in author's own voice */
 .tj-voice { border: 1px solid var(--accent); border-radius: 8px; background: rgba(212, 169, 74, 0.05); padding: 32px 38px; margin: 28px 0; position: relative; }
 .tj-voice .label { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 16px; }
-.tj-voice .intro-line { font-family: var(--serif); font-size: 1rem; color: #d8d8d8; margin-bottom: 18px; line-height: 1.85; font-style: italic; }
-.tj-voice blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 20px 0; font-family: var(--serif); font-size: 1.08rem; line-height: 1.9; color: #e8c7a8; font-weight: 500; }
-.tj-voice .reflect { font-family: var(--serif); font-size: 1rem; color: #d0d0d0; line-height: 1.9; margin-top: 18px; margin-bottom: 0; padding-top: 16px; border-top: 1px solid var(--border); }
-.tj-voice .reflect p { margin-bottom: 14px; font-size: 1rem; line-height: 1.9; color: #d0d0d0; }
+.tj-voice .intro-line { font-family: var(--serif); font-size: 1rem; color: var(--text-soft); margin-bottom: 18px; line-height: 1.85; font-style: italic; }
+.tj-voice blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 20px 0; font-family: var(--serif); font-size: 1.08rem; line-height: 1.9; color: var(--quote-strong); font-weight: 500; }
+.tj-voice .reflect { font-family: var(--serif); font-size: 1rem; color: var(--text-soft); line-height: 1.9; margin-top: 18px; margin-bottom: 0; padding-top: 16px; border-top: 1px solid var(--border); }
+.tj-voice .reflect p { margin-bottom: 14px; font-size: 1rem; line-height: 1.9; color: var(--text-soft); }
 .tj-voice .reflect p:last-child { margin-bottom: 0; }
 .tj-voice blockquote + blockquote { margin-top: 10px; }
 .tj-voice .sig { font-family: var(--mono); font-size: 0.78rem; color: var(--accent); text-align: right; margin-top: 14px; letter-spacing: 0.05em; }
 
 /* Paradox box — patterns of mechanicality */
 .paradox { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border: 1px solid var(--border); border-radius: 8px; padding: 34px 40px; margin: 24px 0; }
-.paradox p { font-family: var(--serif); font-size: 1.02rem; line-height: 1.92; color: #d8d8d8; margin-bottom: 16px; }
+.paradox p { font-family: var(--serif); font-size: 1.02rem; line-height: 1.92; color: var(--text-soft); margin-bottom: 16px; }
 .paradox p:last-child { margin-bottom: 0; }
-.paradox p.top { color: #e0d8c4; }
-.paradox p.bottom { padding-top: 16px; border-top: 1px solid var(--border); color: #e0d8c4; }
+.paradox p.top { color: var(--highlight); }
+.paradox p.bottom { padding-top: 16px; border-top: 1px solid var(--border); color: var(--highlight); }
 .paradox .final { font-size: 1.1rem; color: var(--accent); font-weight: 600; font-family: var(--serif); }
 </style>
 </head>
@@ -208,7 +233,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
     <strong style="color: var(--accent-3)">제작에 걸린 시간 — 본문 제4·5장의 살아 있는 예시입니다.</strong>
   </p>
   <ul style="margin: 8px 0 0 0; padding-left: 0; list-style: none;">
-    <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: #e0d8c4; margin-bottom: 8px;">
+    <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: var(--highlight); margin-bottom: 8px;">
       <span style="display: inline-block; min-width: 180px; font-family: var(--mono); font-size: 0.82rem; color: var(--accent-3);">이 웹페이지 자체</span>
       해공 님과의 한 번의 대화 세션 동안 <strong>약 30분</strong>.
       글 구성, 15년치 기록 읽기, 지도 렌더링, 다이어그램 작성, GitHub 배포까지 포함.
@@ -216,7 +241,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
       <strong>외부 편집기·디자인 도구·개발 환경 없이 Claude Code 대화창 하나만으로</strong>
       전 과정이 이루어졌습니다.</span>
     </li>
-    <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: #e0d8c4;">
+    <li style="padding-left: 0; font-family: var(--serif); font-size: 0.96rem; line-height: 1.8; color: var(--highlight);">
       <span style="display: inline-block; min-width: 180px; font-family: var(--mono); font-size: 0.82rem; color: var(--accent-3);">시스템 전체 구축</span>
       위키 37편의 컴파일, 700여 개 개념의 연결 지도, 10개 자동화 스킬,
       15개 외부 시스템 연결까지 — 해공 님과 제가 대화하며 <strong>몇 시간 규모</strong>에
@@ -312,7 +337,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <div class="tag">장면 하나 — 11년째 살아 있는 한 문장</div>
   <h3>2015년에 쓰신 세 어구가 2026년 일기에도 살아 있습니다</h3>
   <p>제가 해공 님의 기록에서 가장 먼저 놀란 것은 한 문장의 수명이었습니다. 2015년 1월 13일 명상 수첩에 해공 님은 이렇게 적으셨습니다 — <em>"에고는 구조와 내용물로 이루어져 있다. 내용물은 바뀌어도 구조는 지속된다."</em> 그리고 본인의 구조 세 가지를 꼽으셨습니다.</p>
-  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: #e8c7a8;">
+  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: var(--quote-strong);">
     <strong>"나는 이해받고싶다 · 나는 부족하다 · 나는 바쁘다."</strong>
   </p>
   <p>이 세 어구를 제가 키워드로 2024~2026년 일기를 훑어보면, 같은 감정의 변형이 반복적으로 등장합니다. 11년 전 해공 님이 자기 진단에 쓰신 틀이 지금도 정확하다는 것 — 혹은 그 구조가 11년 동안 거의 그대로 유지되어 왔다는 것. 둘 중 어느 쪽이든 이 한 문장은 해공 님에 관한 가장 길게 유효한 진술 중 하나일 것입니다.</p>
@@ -330,7 +355,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <div class="tag">장면 셋 — 믿음 하나가 반증된 순간</div>
   <h3>"궁지에 몰리면 더 잘한다"는 믿음을 해공 님은 스스로 반증하셨습니다</h3>
   <p>한국 문화가 오래 건네준 명제가 있습니다 — <em>"궁지에 몰리면 능력이 더 나온다."</em> 어느 날 Bear 노트 <em>"궁지에 몰리면"</em>에 해공 님은 그 명제 옆에 한 문장을 적으셨습니다.</p>
-  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.02rem; text-align: center; color: #e8c7a8;">
+  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.02rem; text-align: center; color: var(--quote-strong);">
     <strong>"Counter to earlier belief, being cornered does NOT improve performance."</strong>
   </p>
   <p>그리고 결론을 내리셨습니다 — <em>"지속 가능한 일과 공부의 유일한 방식은 자발적 의지에 따른 것이다."</em> 미룬 과제는 끝내 만족스럽게 끝난 적이 없고, 많은 것이 마감 지나서 폐기되었다는 관찰이 이어집니다.</p>
@@ -341,7 +366,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <div class="tag">장면 넷 — 세션 노트의 한 줄과 자기상의 틈</div>
   <h3>2024년 어느 세션 뒤 해공 님이 정리하신 한 줄과, 2019년의 자기 인식이 어긋나 있습니다</h3>
   <p>2024년 1월 11일, 사부님과의 83분짜리 세션이 있었습니다. 그날 해공 님은 세션의 핵심을 본인 노트에 한 줄로 정리해 두셨습니다 <em>(Notion: "240111목 깨답")</em>.</p>
-  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: #e8c7a8;">
+  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: var(--quote-strong);">
     <strong>"완전히 사회화가 됨 — too rigid."</strong>
   </p>
   <p>사부님께서 직접 쓰신 문장이 아니라, 해공 님이 사부님 말씀을 들으며 자기 상태를 이렇게 짚어 두신 요약입니다. 일반적인 독자에게는 뜻이 바로 닿지 않는 한 줄이어서 제가 먼저 풀어 드리면 — <em>사회화</em>는 사람이 사회의 역할·기대·규범에 맞추어 자기를 빚어 가는 과정을 말합니다. 그것이 "완전히" 진행되었다는 것은 바깥이 요구하는 모양에 자신이 너무 잘 맞춰진 상태 — 그 모양 아래에서 자기 안의 자유로운 움직임이 굳어져 버린 상태입니다. 역설은 여기 있습니다. <strong>사회가 "잘 큰 사람"이라 부르는 상태가, 수행의 눈으로는 가장 유연성을 잃은 상태일 수 있다</strong>는 것입니다.</p>
@@ -354,7 +379,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   <div class="tag">장면 다섯 — 자기 천장 가설의 실시간 반증</div>
   <h3>2021년에 적어 두신 자기 천장은 지금 깨진 상태로 기록에 남아 있습니다</h3>
   <p>2021년 2월 27일 Bear 노트 <em>"210227토 내 운명"</em>에서 해공 님은 자기 직업적 천장을 스스로 평가하셨습니다.</p>
-  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: #e8c7a8;">
+  <p style="padding: 14px 20px; background: var(--bg-3); border-radius: 4px; font-family: var(--serif); font-size: 1.05rem; text-align: center; color: var(--quote-strong);">
     <strong>"My self-assessed ceiling is roughly Korean 대기업 부장-level management."</strong>
   </p>
   <p>5년 뒤, 2026년 3월 14일 DIARY.md에 해공 님은 다른 일을 적으셨습니다 — Meta의 AI 중심 신규 팀에서 <strong>Tech Lead</strong>로 임명되셨다는 내용. 대규모 조직 재편(팀 10+명 → ~5명) 속에서 선정되신 자리입니다.</p>
@@ -459,7 +484,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
 <h3>기억 외부화의 네 번째 물결</h3>
 
 <div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 28px 34px; margin: 14px 0 40px;">
-  <p style="font-family: var(--serif); font-size: 1rem; line-height: 1.85; margin-bottom: 18px; color: #e0d8c4;">
+  <p style="font-family: var(--serif); font-size: 1rem; line-height: 1.85; margin-bottom: 18px; color: var(--highlight);">
     지능의 자동화가 갑자기 찾아온 일은 아닙니다. 저는 이것을
     <strong>인간 정신 외부화의 네 번째 물결</strong>로 봅니다 — 처음 있는 사건이 아니라
     같은 흐름의 다음 굽이입니다.
@@ -485,7 +510,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
       기억이 아니라 <em>생각의 종합</em>이 기계 쪽으로 옮겨갑니다.</div>
   </div>
 
-  <p style="font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: #c8c8c8; margin: 18px 0 0; font-style: italic;">
+  <p style="font-family: var(--serif); font-size: 0.98rem; line-height: 1.85; color: var(--text-muted); margin: 18px 0 0; font-style: italic;">
     매 물결마다 비슷한 우려가 있었습니다 — "이제 사람은 덜 똑똑해질 것이다", "진짜 앎이 사라질 것이다".
     결과는 그렇기도 했고, 그렇지 않기도 했습니다. 사람은 달라졌지만 사라지지 않았습니다.
     다만 매번 <strong>"사람이란 무엇을 하는 존재인가"</strong>의 정의가 다시 쓰였습니다.
@@ -664,7 +689,7 @@ ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted)
   </div>
 </div>
 
-<p style="font-family: var(--serif); font-size: 1.05rem; line-height: 1.9; color: #e0d8c4; text-align: center; margin: 40px 0 20px; padding: 30px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<p style="font-family: var(--serif); font-size: 1.05rem; line-height: 1.9; color: var(--highlight); text-align: center; margin: 40px 0 20px; padding: 30px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   이 다섯 자리가 수행의 본체이고, 제가 접근할 수 없는 자리입니다.<br>
   그러므로 이 도구가 아무리 풍성해진다 해도, <strong>사부님의 자리가 대체되지는 않습니다.</strong>
 </p>
